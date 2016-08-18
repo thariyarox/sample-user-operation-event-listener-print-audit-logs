@@ -33,7 +33,6 @@ public class SampleUserOperationEventListener extends AbstractUserOperationEvent
     public boolean doPreAuthenticate(String userName, Object credential, UserStoreManager userStoreManager) throws UserStoreException {
 
         //return super.doPreAuthenticate(userName, credential, userStoreManager);
-        audit.info("doPreAuthenticate : " + userName);
         audit.info(String.format(AUDIT_MESSAGE, getUser(), "doPreAuthenticate", userName));
         return true;
     }
